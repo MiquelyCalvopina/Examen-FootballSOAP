@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2021.11.29 a las 08:32:27 PM COT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://espe.edu.ec/arquitectura/soapexamen/ws">
+    <schemaBindings map="false">
+      <package name="ec.edu.espe.arquitectura.soapexamen.ws"/>
+    </schemaBindings>
+    <bindings scd="tns:getAvailableMatchesRequest">
+      <class ref="ec.edu.espe.arquitectura.soapexamen.ws.GetAvailableMatchesRequest"/>
+    </bindings>
+    <bindings scd="tns:getAvailableMatchesResponse">
+      <class ref="ec.edu.espe.arquitectura.soapexamen.ws.GetAvailableMatchesResponse"/>
+    </bindings>
+    <bindings scd="~tns:match">
+      <class ref="ec.edu.espe.arquitectura.soapexamen.ws.Match"/>
+    </bindings>
+    <bindings scd="tns:getLocationsMatchRequest">
+      <class ref="ec.edu.espe.arquitectura.soapexamen.ws.GetLocationsMatchRequest"/>
+    </bindings>
+    <bindings scd="tns:getLocationsMatchResponse">
+      <class ref="ec.edu.espe.arquitectura.soapexamen.ws.GetLocationsMatchResponse"/>
+    </bindings>
+    <bindings scd="~tns:location">
+      <class ref="ec.edu.espe.arquitectura.soapexamen.ws.Location"/>
+    </bindings>
+    <bindings scd="tns:buyLocationMatchRequest">
+      <class ref="ec.edu.espe.arquitectura.soapexamen.ws.BuyLocationMatchRequest"/>
+    </bindings>
+    <bindings scd="tns:buyLocationMatchResponse">
+      <class ref="ec.edu.espe.arquitectura.soapexamen.ws.BuyLocationMatchResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+

@@ -1,0 +1,66 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://espe.edu.ec/arquitectura/soapexamen/ws"
+           targetNamespace="http://espe.edu.ec/arquitectura/soapexamen/ws" elementFormDefault="qualified">
+
+    <!--Objeto-->
+    <xs:complexType name="match">
+        <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+            <xs:element name="localTeam" type="xs:string"/>
+            <xs:element name="visitantTeam" type="xs:string"/>
+            <xs:element name="dateTime" type="xs:dateTime"/>
+            <xs:element name="place" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="location">
+        <xs:sequence>
+            <xs:element name="locationCode" type="xs:string"/>
+            <xs:element name="matchCode" type="xs:string"/>
+            <xs:element name="available" type="xs:decimal"/>
+            <xs:element name="price" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <!--Métodos-->
+    <xs:element name="getAvailableMatchesRequest">
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="getAvailableMatchesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="matches" type="tns:match" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getLocationsMatchRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="matchCode" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getLocationsMatchResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="locationsMatches" type="tns:location" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="buyLocationMatchRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="matchCode" type="xs:string"/>
+                <xs:element name="locationCode" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="buyLocationMatchResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="location" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
