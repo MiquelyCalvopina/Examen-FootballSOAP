@@ -8,6 +8,8 @@
 
 package ec.edu.espe.arquitectura.soapexamen.ws;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,6 +42,7 @@ import javax.xml.bind.annotation.XmlType;
     "locationsMatches"
 })
 @XmlRootElement(name = "getLocationsMatchResponse")
+@Data
 public class GetLocationsMatchResponse {
 
     protected List<Location> locationsMatches;
